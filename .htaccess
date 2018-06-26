@@ -15,5 +15,5 @@ AddOutputFilterByType DEFLATE application/x-javascript
 
 ErrorDocument 404 /404.html
 ErrorDocument 401 /401.html
-Errordocument 403 /403.html
+Errordocument 400 /400.html
 Errordocument 500 /500.html
