@@ -1,0 +1,18 @@
+.oops {
+  font-size: 4.5em;
+}
+
+.cant-seem {
+  font-size: 1.7em;
+}
+
+span {
+  font-size: 2.3em;
+}
+
+@media screen and (max-width: 640px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
+}

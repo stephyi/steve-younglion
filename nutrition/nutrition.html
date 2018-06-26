@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Steve Younglion | Nutrition</title>
+	<meta name="description" content="A CSS Grid powered menu with a box look" />
+	<meta name="keywords" content="menu, css grid, box, navigation, web development, animation" />
+	<meta name="author" content="Codrops" />
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo2.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+	<script>
+		document.documentElement.className = "js";
+		var supportsCssVars = function() {
+			var e, t = document.createElement("style");
+			return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports &&
+				window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+		};
+		supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+	</script>
+</head>
+
+<body class="demo-2 ">
+	<main>
+		<div class="content content--fixed">
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="https://tympanus.net/Development/GlitchSlideshow/" title="Previous Demo">
+						<svg class="icon icon--arrow">
+							<use xlink:href="#icon-arrow"></use>
+						</svg>
+					</a>
+					<a class="codrops-icon codrops-icon--drop" href="https://tympanus.net/codrops/?p=34419" title="Back to the article">
+						<svg class="icon icon--drop">
+							<use xlink:href="#icon-drop"></use>
+						</svg>
+					</a>
+				</div>
+			</header>
+			<nav class="demos text-center">
+
+				<h1>
+					Steve Younglion
+				</h1>
+				<span class="text-secondary">&mdash; nutrition blog &mdash;</span>
+				<br>
+				<button class="navbar-toggler mr-4" type="button" data-toggle="collapse" data-target="#collapse-navbar">
+					<span class="navbar-toggler-icon text-center">
+						<div class="container text-center " onclick="myFunction(this)">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+					</span>
+				</button>
+				<nav class="navbar navbar-expand-md">
+
+
+
+					<div class="collapse navbar-collapse" id="collapse-navbar">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a href="../index.html" class="nav-link text-dark">Home</a>
+							</li>
+							<li class="nav-item">
+								<a href="../workouts/workouts.html" class="nav-link text-dark">Workouts</a>
+							</li>
+							<li class="nav-item">
+								<a href="../nutrition/nutrition.html" class="nav-link text-dark"> nutrition</a>
+							</li>
+							<li class="nav-item">
+								<a href="../gallery/gallery.html" class="nav-link text-dark"> gallery</a>
+							</li>
+							<li class="nav-item">
+								<a href="../shop/shop.php" class="nav-link text-dark"> shop</a>
+							</li>
+
+						</ul>
+					</div>
+
+				</nav>
+
+			</nav>
+			<button class="menu-trigger">+ Articles</button>
+		</div>
+		<div id="content-1" class="content content--switch content--switch-current">
+			<h2 class="content__title">Steve Younglion</h2>
+			<div class="content__subtitle">&mdash; nutrition blog &mdash;</div>
+			<ul class="navbar nav text-secondary">
+				<li class="nav-item">
+					<a href="../index.html" class="nav-link text-primary">Home</a>
+				</li>
+				<li class="nav-item">
+					<a href="../Workouts/workouts.html" class="nav-link text-primary">Workouts</a>
+				</li>
+				<li class="nav-item">
+					<a href="../nutrition/nutrition.html" class="nav-link text-primary"> nutrition</a>
+				</li>
+				<li class="nav-item">
+					<a href="../gallery/gallery.html" class="nav-link text-primary"> gallery</a>
+				</li>
+				<li class="nav-item">
+					<a href="../shop/shop.php" class="nav-link text-primary"> shop</a>
+				</li>
+
+			</ul>
+		</div>
+		<div id="content-2" class="content content--switch">
+			<h2 class="content__title text-light">Diet 1</h2>
+			<div class="content__subtitle">
+				<a href="#">Read more...</a>
+			</div>
+
+		</div>
+		<div id="content-3" class="content content--switch">
+			<h2 class="content__title text-light">Diet 2</h2>
+			<div class="content__subtitle">
+				<a href="#">Read more...</a>
+			</div>
+		</div>
+		<div id="content-4" class="content content--switch">
+			<h2 class="content__title text-light">Diet 3</h2>
+			<div class="content__subtitle">
+				<a href="#">Read more...</a>
+			</div>
+		</div>
+		<div id="content-5" class="content content--switch">
+			<h2 class="content__title text-light">Balanced Diet</h2>
+			<div class="content__subtitle">
+				<a href="#">Read more...</a>
+			</div>
+		</div>
+		<div id="content-6" class="content content--switch">
+			<h2 class="content__title text-light">Diet 4</h2>
+			<div class="content__subtitle">
+				<a href="#">Read more...</a>
+			</div>
+		</div>
+		<nav class="grim">
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--1"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--2"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--3"></div>
+				<div class="grim__item-content">
+					<div class="grim__item-inner">
+						<button class="menu-trigger menu-trigger--close">- close</button>
+					</div>
+				</div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--4"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--5"></div>
+				<a href="#content-1" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title">Home</h3>
+					</div>
+				</a>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--6"></div>
+				<div class="grim__item-img grim__item-img--1" style="background-image: url(img/pexels-photo-209371.jpeg);"></div>
+				<a href="#content-2" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title text-light">Diet 1</h3>
+						<span class="grim__item-desc text-light">Lift your spirits</span>
+					</div>
+				</a>
+				<div class="grim__item-bg grim__item-bg-cover grim__item-bg--6"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--7"></div>
+				<div class="grim__item-img grim__item-img--2" style="background-image: url(img/pexels-photo-272242.jpeg);"></div>
+				<a href="#content-3" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title text-light">Diet 2</h3>
+						<span class="grim__item-desc text-light">Find yourself</span>
+					</div>
+				</a>
+				<div class="grim__item-bg grim__item-bg-cover grim__item-bg--7"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--8"></div>
+				<div class="grim__item-img grim__item-img--3" style="background-image: url(img/pexels-photo-326279.jpeg)"></div>
+				<a href="#content-4" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title text-light">Diet 3</h3>
+						<span class="grim__item-desc text-light">Uncover beauty</span>
+					</div>
+				</a>
+				<div class="grim__item-bg grim__item-bg-cover grim__item-bg--8"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--9"></div>
+				<div class="grim__item-img grim__item-img--4" style="background-image: url(img/pexels-photo-315737.jpeg);"></div>
+				<a href="#content-5" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title text-light">Balanced diet</h3>
+						<span class="grim__item-desc text-light">Feel nature</span>
+					</div>
+				</a>
+				<div class="grim__item-bg grim__item-bg-cover grim__item-bg--9"></div>
+			</div>
+			<div class="grim__item">
+				<div class="grim__item-bg grim__item-bg--10"></div>
+				<div class="grim__item-img grim__item-img--5" style="background-image: url(img/close-up-color-confection-992816.jpg);"></div>
+				<a href="#content-6" class="grim__link grim__item-content">
+					<div class="grim__item-inner">
+						<h3 class="grim__item-title text-light">Diet 4</h3>
+						<span class="grim__item-desc text-light">Explore your limits</span>
+					</div>
+				</a>
+				<div class="grim__item-bg grim__item-bg-cover grim__item-bg--10"></div>
+			</div>
+		</nav>
+	</main>
+	<footer class="footer pt-5">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h5 class="text-center">subscribe to our newsletter</h5>
+				<div class="container">
+					<form action="#" method="post">
+						<div class="form-group">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										@
+									</span>
+								</div>
+								<input type="email" name="email" id="email" class="form-control" placeholder="example@email.com" required>
+								<input class="btn btn-primary" type="submit" value="submit">
+							</div>
+						</div>
+					</form>
+
+				</div>
+				<div class="copyright text-center mx-auto">
+					<span class="small text-secondary mt-2 pt-4 pb-4">
+						&copy;2018 Steve Younglion. All rights reserved
+					</span>
+				</div>
+
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</footer>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script src="js/demo.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script src="js/anime.min.js"></script>
+	<script src="js/menu2.js"></script>
+	<script>
+		function myFunction(x) {
+			x.classList.toggle("change");
+		}
+	</script>
+
+
+</body>
+
+</html>

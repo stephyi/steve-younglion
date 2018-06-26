@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    background-color: #2C3338;
+    overflow-x: hidden;
+}
+
+.card {
+    background-color: #2C3338;
+    color: rgba(198, 199, 201, 0.521);
+    border: none;
+}
+
+a {
+    color: white;
+}
+
+input {
+    padding: 10px !important;
+}
