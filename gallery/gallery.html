@@ -89,12 +89,12 @@
 
                 <div class="grid__item" data-size="1280x857">
                     <a href="../images/strongest-man.jpg" class="img-wrap">
-                        <img src="../images/strongest-man.jpg" alt="img06" />
+                        <img src= "<?php echo $row[$key]['link']; ?>"alt="#" />
                         <div class="description description--grid">
-                            <h3>From a previous Hike</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus fermentum lorem, vel luctus
-                                dui dictum ac. Donec eu tortor consequat, venenatis lacus non, pellentesque purus. Duis volutpat,
-                                dui eu vehicula congue, enim mauris rhoncus turpis, non hendrerit nulla tellus vel felis.
+                            <h3>
+                                 <strong><?php echo $row[$key]["title"]; ?></strong>
+                            </h3>
+                            <p><strong><?php echo $row[$key]["description"]; ?></strong>
                                 <a href="book-hike.php" class="text-primary pt-5">click here to register for next hike</a>
                 </div>
                 </a>
