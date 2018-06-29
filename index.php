@@ -4,30 +4,41 @@ session_start();
 
     if (isset($_POST["email"])) {
         $email = strip_tags($_POST["email"]);
-        if (empty($email)) {
-            $db = "steveyou_users";
-            $user = "steveyou_admin";
-            $password = "Admin@@2030";
-            $host = "localhost";
+        $db = "steveyou_users";
+        $user = "steveyou_admin";
+        $password = "Admin@@2030";
+        $host = "localhost";
 
-            $conn = mysqli_connect($user, $password, $host, $db);
-            $sql = "SELECT * FROM subscribers WHERE email = ('$email')";
+        $conn = mysqli_connect($host, $user, $password, $db);
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
 
-            $result = mysqli_query($conn, $sql);
-            $rows = mysqli_num_rows($result);
+        $sql = "SELECT * FROM subscribers WHERE email = ('$email')";
 
-            if ($rows > 0) {
-                $emailErr = "Subscriber already exists";
-            } else {
-                $sql = "INSERT INTO subscribers (email) VALUES ('$email')";
-                mysqli_query($conn, $sql);
+        $result = mysqli_query($conn, $sql);
+
+        $rows = mysqli_num_rows($result);
+
+        if ($rows > 0) {
+            $emailErr = "Subscriber already exists";
+        } else {
+            $sql = "INSERT INTO subscribers (email) VALUES ('$email')";
+            if (mysqli_query($conn, $sql)) {
                 $emailErr = "You have successfully subscribed.";
 
-                // closing the database
-                mysqli_close($conn);
+                $from="info@steveyounglion.com";
+                $to= $email;
+                $subject = "Steve younglion subscription";
+                $message = "You have successfully subscribed to receive newsletters from Steve younglion.";
+
+                mail($to, $subject, $message, $from);
+            } else {
+                echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
-        } else {
-            $emailErr = "An error occurred, please try again";
+
+            // closing the database
+            mysqli_close($conn);
         }
     }
 
@@ -508,14 +519,15 @@ session_start();
                     <div class="col-md-1 "></div>
                     <div class="col-md-4 agile-footer-grid ">
                         <h3>Subscribe</h3>
-						<?php echo $emailErr; ?>
+						<div class="text-danger" style="z-index:1;">
+							<?php echo $emailErr; ?>
+						</div>
                         <form action="index.php" method="post" class="form">
-                            <input type="email" name="Email" placeholder="subscribe to our mailing list " required>
+                            <input type="email" name="email" placeholder="subscribe to our mailing list" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
                             <input type="submit" value="Send">
                         </form>
 
                     </div>
-                    <div class="clearfix "> </div>
                 </div>
             </div>
         </div>
